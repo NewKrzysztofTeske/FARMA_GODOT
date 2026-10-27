@@ -1,0 +1,8 @@
+[gd_resource type="Theme" format=3 uid="uid://cxe621b4lbs7c"]
+
+[ext_resource type="FontFile" uid="uid://cb8g80mgy05sn" path="res://FONTS/xabakum-font/Xabakum-JpMKM.otf" id="1_oxpcx"]
+
+[resource]
+default_font = ExtResource("1_oxpcx")
+Label/font_sizes/font_size = 100
+Label/fonts/font = ExtResource("1_oxpcx")

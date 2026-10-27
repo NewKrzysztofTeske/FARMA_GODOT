@@ -1,0 +1,14 @@
+[gd_resource type="Theme" format=3 uid="uid://reuxdhqa37an"]
+
+[ext_resource type="FontFile" uid="uid://clf7kj7o60ygb" path="res://FONTS/brizel/Brizel.ttf" id="1_uvwj3"]
+
+[resource]
+default_base_scale = 2.0
+default_font = ExtResource("1_uvwj3")
+default_font_size = 0
+Label/font_sizes/font_size = 20
+Label/fonts/font = ExtResource("1_uvwj3")
+ProgressBar/colors/font_color = Color(0.95, 0.95, 0.95, 1)
+ProgressBar/colors/font_outline_color = Color(0.5795274, 0.033579476, 4.813075e-08, 1)
+ProgressBar/constants/outline_size = 17
+ProgressBar/fonts/font = ExtResource("1_uvwj3")

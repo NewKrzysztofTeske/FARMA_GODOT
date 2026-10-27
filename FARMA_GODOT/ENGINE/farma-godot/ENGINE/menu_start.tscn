@@ -1,0 +1,167 @@
+[gd_scene format=3 uid="uid://buxj2m5vysav2"]
+
+[ext_resource type="Texture2D" uid="uid://bxxkaafln0siy" path="res://GRAPHIC/backgrounds/G_b_menu.jpg" id="1_itfc7"]
+[ext_resource type="Theme" uid="uid://cxe621b4lbs7c" path="res://GRAPHIC/UI/BigLabel.tres" id="2_0k6jj"]
+[ext_resource type="Theme" uid="uid://reuxdhqa37an" path="res://GRAPHIC/UI/RoleLabel.tres" id="2_rhbxv"]
+[ext_resource type="Texture2D" uid="uid://df8bprsm0fwj0" path="res://GRAPHIC/logos/logos_head_kopia.png" id="4_k6xmv"]
+[ext_resource type="Texture2D" uid="uid://5mjx8u843t7r" path="res://GRAPHIC/placeholders/1_tiles_FARMA.png" id="4_k8fn7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lepw"]
+atlas = ExtResource("4_k8fn7")
+region = Rect2(2691, 2674, 791, 178)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnm7r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tt1gq"]
+atlas = ExtResource("4_k6xmv")
+
+[node name="menu_start" type="Control" unique_id=1808372685]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BgTextureRect" type="TextureRect" parent="." unique_id=1336585352]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.49968556, 0.49968556)
+texture = ExtResource("1_itfc7")
+
+[node name="SocialsTabContainer" type="TabContainer" parent="." unique_id=1658558449]
+layout_mode = 0
+offset_right = 101.0
+offset_bottom = 219.0
+mouse_filter = 2
+mouse_behavior_recursive = 2
+current_tab = 0
+
+[node name="Socials" type="Label" parent="SocialsTabContainer" unique_id=1370271891]
+layout_mode = 2
+theme = ExtResource("2_rhbxv")
+theme_type_variation = &"HeaderLarge"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_tab_index = 0
+
+[node name="IG_HFlowContainer" type="HFlowContainer" parent="SocialsTabContainer/Socials" unique_id=1884187359]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 183.0
+alignment = 1
+
+[node name="TextureButton2" type="TextureButton" parent="SocialsTabContainer/Socials/IG_HFlowContainer" unique_id=802952464]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="SocialsTabContainer/Socials/IG_HFlowContainer" unique_id=435942650]
+layout_mode = 2
+
+[node name="GameLabel2" type="Label" parent="." unique_id=1360952336]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.9990001
+anchor_right = 1.0
+anchor_bottom = 0.9990001
+offset_left = -642.0801
+offset_top = 121.0
+offset_right = -63.0
+offset_bottom = -705.92004
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("2_0k6jj")
+theme_type_variation = &"HeaderLarge"
+text = "FARMA_godot"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="MenuBar" type="MenuBar" parent="." unique_id=1332937538]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(-362, 130)
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="MenuBar" unique_id=2095651568]
+layout_mode = 0
+offset_left = -644.0
+offset_top = -160.0
+offset_right = -63.0
+offset_bottom = 389.0
+metadata/_edit_use_anchors_ = true
+
+[node name="HFlowContainer" type="HFlowContainer" parent="MenuBar" unique_id=1656326213]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -623.0001
+offset_top = -64.76001
+offset_right = 167.99988
+offset_bottom = 477.24
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.68, 0.68)
+offset_transform_enabled = true
+
+[node name="TextureB_START" type="TextureButton" parent="MenuBar/HFlowContainer" unique_id=976794918]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_1lepw")
+texture_pressed = SubResource("AtlasTexture_bnm7r")
+
+[node name="TextureB_OPTIONS" type="TextureButton" parent="MenuBar/HFlowContainer" unique_id=936156635]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_1lepw")
+
+[node name="TextureB_AUTHORS" type="TextureButton" parent="MenuBar/HFlowContainer" unique_id=1104792284]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_1lepw")
+
+[node name="LineEdit_GVersion" type="LineEdit" parent="." unique_id=426837338]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.9712963
+anchor_right = 0.9057292
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "beta 0.0.1                                     Jest to wersja gry przygotowana na potrzeby zaliczenia"
+alignment = 1
+keep_editing_on_text_submit = true
+expand_to_text_length = true
+metadata/_edit_use_anchors_ = true
+
+[node name="LinkButton" type="LinkButton" parent="." unique_id=2134910399]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RaniLogo" type="TextureRect" parent="." unique_id=1498114725]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -180.99988
+offset_top = -151.0
+offset_right = 3067.0
+offset_bottom = 2724.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.0529115, 0.0529115)
+texture = SubResource("AtlasTexture_tt1gq")

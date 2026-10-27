@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://08prggisn5id"]
+
+[ext_resource type="Texture2D" uid="uid://b0mafwc58ywar" path="res://GRAPHIC/placeholders/PC _ Computer - Cities XL - Roads - Farm Roads.png" id="1_kl87x"]
+[ext_resource type="Texture2D" uid="uid://5mjx8u843t7r" path="res://GRAPHIC/placeholders/1_tiles_FARMA.png" id="1_uw52t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fp1v"]
+atlas = ExtResource("1_kl87x")
+region = Rect2(0, 184, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3o5b6"]
+atlas = ExtResource("1_uw52t")
+region = Rect2(2617, 1557, 955, 303)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lepw"]
+atlas = ExtResource("1_uw52t")
+region = Rect2(2265, 167, 163, 148)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m52wq"]
+atlas = ExtResource("1_uw52t")
+region = Rect2(2176, 804, 433, 283)
+
+[node name="BoardScane" type="Node2D" unique_id=1632845642]
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=940801674]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1514262272]
+
+[node name="BgBoard" type="TextureRect" parent="ParallaxBackground" unique_id=113463387]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = SubResource("AtlasTexture_8fp1v")
+
+[node name="FOG" type="TextureRect" parent="ParallaxBackground/BgBoard" unique_id=525920753]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1057.0
+offset_top = -179.0
+offset_right = 1043.0
+offset_bottom = 124.0
+grow_horizontal = 2
+texture = SubResource("AtlasTexture_3o5b6")
+
+[node name="ActorAvatarSprite" type="Sprite2D" parent="." unique_id=1253035469]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1274371576]
+position = Vector2(969, 545)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1765068452]
+offset_left = -57.0
+offset_top = -60.0
+offset_right = 113.0
+offset_bottom = 110.0
+fill_mode = 4
+nine_patch_stretch = true
+texture_under = SubResource("AtlasTexture_1lepw")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1343849326]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRec_setingst" type="TextureRect" parent="." unique_id=858217946]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 1687.0
+offset_top = 151.0
+offset_right = 2120.0
+offset_bottom = 434.0
+grow_horizontal = 0
+scale = Vector2(0.48816139, 0.48816139)
+texture = SubResource("AtlasTexture_m52wq")
