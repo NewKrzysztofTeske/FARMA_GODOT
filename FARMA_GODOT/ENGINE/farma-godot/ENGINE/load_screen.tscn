@@ -1,23 +1,80 @@
 [gd_scene format=3 uid="uid://c3ydvgc46cjr1"]
 
-[ext_resource type="Texture2D" uid="uid://dg0feeujwfgha" path="res://GRAPHIC/placeholders/G_B_Load_-1.jpg" id="1_0ker7"]
+[ext_resource type="Texture2D" uid="uid://dg0feeujwfgha" path="res://GRAPHIC/placeholders/G_B_Load_-1.jpg" id="1_e77g4"]
+[ext_resource type="Theme" uid="uid://cxe621b4lbs7c" path="res://GRAPHIC/THEMES/BigLabel.tres" id="2_h37r2"]
+
+[sub_resource type="Animation" id="Animation_e77g4"]
+resource_name = "Label_dots"
+length = 4.366667
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GBLoad1/AnimationTree/FlowContainer/Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.73333335, 1.3666667, 1.9333333, 2.6333334, 3.5, 3.9333334, 4.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": ["Wczytywanie...", "Wczytywanie..", "Wczytywanie.", "Wczytywanie", "Wczytywanie...", "Wczytywanie..", "Wczytywanie.", "Wczytywanie"]
+}
+
+[sub_resource type="Animation" id="Animation_sgesk"]
+resource_name = "Label_shake"
+
+[sub_resource type="Animation" id="Animation_h37r2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GBLoad1/AnimationTree/FlowContainer/Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Wczytywanie..."]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sgesk"]
+_data = {
+&"Label_dots": SubResource("Animation_e77g4"),
+&"Label_shake": SubResource("Animation_sgesk"),
+&"RESET": SubResource("Animation_h37r2")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_e77g4"]
 
 [node name="Node2D" type="Node2D" unique_id=1986423541]
 
 [node name="GBLoad1" type="Sprite2D" parent="." unique_id=96316429]
 position = Vector2(958, 542)
-texture = ExtResource("1_0ker7")
+texture = ExtResource("1_e77g4")
 
-[node name="Label" type="Label" parent="GBLoad1" unique_id=1535051033]
-anchors_preset = 3
+[node name="AnimationTree" type="AnimationTree" parent="GBLoad1" unique_id=331718933]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_sgesk")
+tree_root = SubResource("AnimationNodeAnimation_e77g4")
+
+[node name="FlowContainer" type="FlowContainer" parent="GBLoad1/AnimationTree" unique_id=110793132]
+anchors_preset = -1
 anchor_left = 1.0
-anchor_top = 1.0
+anchor_top = 1.0020001
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1074.0
-offset_top = -540.0
-offset_right = -960.0
-offset_bottom = -517.0
+anchor_bottom = 1.0020001
+offset_left = -652.0
+offset_top = -181.16016
+offset_bottom = -81.16016
 grow_horizontal = 0
 grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="GBLoad1/AnimationTree/FlowContainer" unique_id=1535051033]
+layout_mode = 2
+theme = ExtResource("2_h37r2")
 text = "Wczytywanie..."

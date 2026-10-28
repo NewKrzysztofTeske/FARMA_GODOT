@@ -1,25 +1,37 @@
 [gd_scene format=3 uid="uid://dvuhfgl86klkl"]
 
-[ext_resource type="Texture2D" uid="uid://dg0feeujwfgha" path="res://GRAPHIC/placeholders/G_B_Load_-1.jpg" id="1_vmbab"]
-[ext_resource type="Theme" uid="uid://cxe621b4lbs7c" path="res://GRAPHIC/THEMES/BigLabel.tres" id="2_1kk3w"]
+[ext_resource type="Shader" uid="uid://oakwlty52a55" path="res://ENGINE/SHADERs/UI_Card.tres" id="1_vmbab"]
 
-[node name="Node2D" type="Node2D" unique_id=1986423541]
+[sub_resource type="Animation" id="Animation_m7ayg"]
+resource_name = "moving_star"
 
-[node name="GBLoad1" type="Sprite2D" parent="." unique_id=96316429]
-position = Vector2(958, 542)
-texture = ExtResource("1_vmbab")
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vmbab"]
+_data = {
+&"moving_star": SubResource("Animation_m7ayg")
+}
 
-[node name="Label" type="Label" parent="GBLoad1" unique_id=1535051033]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1580.0
-offset_top = -723.0
-offset_right = -994.0
-offset_bottom = -623.0
-grow_horizontal = 0
-grow_vertical = 0
-theme = ExtResource("2_1kk3w")
-text = "Wczytywanie..."
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1kk3w"]
+shader = ExtResource("1_vmbab")
+
+[node name="Node2D" type="Node2D" unique_id=228311086]
+
+[node name="FlowContainer" type="FlowContainer" parent="." unique_id=1289955354]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationTree" type="AnimationTree" parent="FlowContainer" unique_id=1993968371]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_vmbab")
+
+[node name="Area2D" type="Area2D" parent="FlowContainer" unique_id=129606428]
+position = Vector2(20, 20)
+
+[node name="CollisionStar" type="CollisionPolygon2D" parent="FlowContainer/Area2D" unique_id=883177957]
+material = SubResource("ShaderMaterial_1kk3w")
+position = Vector2(508.37936, 418.30872)
+polygon = PackedVector2Array(-509.37936, -1604.3087, -307.37936, -757.3087, 365.62064, -1396.3087, -44.379364, -622.3087, 809.6206, -736.3087, 69.620636, -212.30872, 923.6206, 137.69128, 8.620636, 285.69128, 761.6206, 573.6913, 8.620636, 500.69128, 580.6206, 965.6913, -38.379364, 749.6913, 190.62064, 1604.6913, -260.37936, 891.6913, -502.37936, 1610.6913, -650.3794, 924.6913, -1101.3794, 1563.6913, -858.3794, 850.6913, -1612.3794, 1059.6913, -980.3794, 440.69128, -1807.3794, 500.69128, -1040.3794, 198.69128, -1942.3794, -64.308716, -993.3794, -205.30872, -1780.3794, -656.3087, -946.3794, -535.3087, -1430.3794, -1342.3087, -737.3794, -710.3087)
