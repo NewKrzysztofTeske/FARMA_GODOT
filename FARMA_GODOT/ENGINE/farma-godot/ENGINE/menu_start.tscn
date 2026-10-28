@@ -119,6 +119,7 @@ offset_transform_enabled = true
 
 [node name="TextureB_START" type="TextureButton" parent="MenuBar/HFlowContainer" unique_id=976794918]
 layout_mode = 2
+theme = ExtResource("4_bnm7r")
 texture_normal = SubResource("AtlasTexture_1lepw")
 texture_pressed = SubResource("AtlasTexture_bnm7r")
 

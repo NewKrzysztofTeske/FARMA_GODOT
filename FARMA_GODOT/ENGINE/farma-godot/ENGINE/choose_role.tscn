@@ -2,8 +2,9 @@
 
 [ext_resource type="FontFile" uid="uid://cb8g80mgy05sn" path="res://FONTS/xabakum-font/Xabakum-JpMKM.otf" id="1_ud3sl"]
 [ext_resource type="FontFile" uid="uid://clf7kj7o60ygb" path="res://FONTS/brizel/Brizel.ttf" id="2_g3xco"]
-[ext_resource type="Texture2D" uid="uid://cfgtd8gn5jaj4" path="res://icon.svg" id="2_ni6rf"]
-[ext_resource type="Theme" uid="uid://clv5huy2ffnba" path="res://GRAPHIC/UI/ProgresBarTheme.tres" id="5_0p7bw"]
+[ext_resource type="Texture2D" uid="uid://cv65vykstsmc4" path="res://GRAPHIC/logos/Hen_head.png" id="3_02o7k"]
+[ext_resource type="Texture2D" uid="uid://cuxi3rx4gcy44" path="res://GRAPHIC/logos/Fox_head.png" id="4_0p7bw"]
+[ext_resource type="Theme" uid="uid://clv5huy2ffnba" path="res://GRAPHIC/THEMES/ProgresBarTheme.tres" id="5_0p7bw"]
 [ext_resource type="Texture2D" uid="uid://5mjx8u843t7r" path="res://GRAPHIC/placeholders/1_tiles_FARMA.png" id="5_02o7k"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1lepw"]
@@ -20,9 +21,12 @@ default_font = ExtResource("2_g3xco")
 default_font_size = 64
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1lepw"]
-atlas = ExtResource("2_ni6rf")
+atlas = ExtResource("3_02o7k")
 
 [sub_resource type="Theme" id="Theme_uvwj3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4fqj"]
+atlas = ExtResource("4_0p7bw")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bnm7r"]
 atlas = ExtResource("5_02o7k")
@@ -128,20 +132,6 @@ text = "HEN"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HenIcon" type="TextureRect" parent="LeftPanel/HenButton" unique_id=1300104962]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.22017045
-anchor_top = 0.09232955
-anchor_right = 0.7769886
-anchor_bottom = 0.64914775
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 40.0
-grow_horizontal = 2
-texture = SubResource("AtlasTexture_1lepw")
-metadata/_edit_use_anchors_ = true
-
 [node name="QuestLineEdit" type="LineEdit" parent="LeftPanel/HenButton" unique_id=1923871286]
 layout_mode = 1
 anchors_preset = 7
@@ -171,6 +161,22 @@ offset_bottom = -32.0
 grow_horizontal = 2
 grow_vertical = 0
 placeholder_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+
+[node name="HenIcon" type="TextureRect" parent="LeftPanel/HenButton" unique_id=2115797713]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.22900002
+anchor_top = 0.14600001
+anchor_right = 0.73700005
+anchor_bottom = 0.65400004
+offset_left = 0.17098999
+offset_top = 0.2519989
+offset_right = 705.6508
+offset_bottom = 705.34796
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.34673497, 0.34673497)
+texture = SubResource("AtlasTexture_1lepw")
 
 [node name="RightPanel" type="Panel" parent="." unique_id=1262947014]
 layout_mode = 1
@@ -210,20 +216,6 @@ text = "FOX"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="FoxIcon" type="TextureRect" parent="RightPanel/FoxButton" unique_id=1288508633]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.21978027
-anchor_top = 0.09012347
-anchor_right = 0.7765984
-anchor_bottom = 0.6469416
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 40.0
-grow_horizontal = 2
-texture = SubResource("AtlasTexture_1lepw")
-metadata/_edit_use_anchors_ = true
-
 [node name="QuestLineEdit" type="LineEdit" parent="RightPanel/FoxButton" unique_id=2124564392]
 layout_mode = 1
 anchors_preset = 7
@@ -254,12 +246,26 @@ grow_horizontal = 2
 grow_vertical = 0
 placeholder_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
 
+[node name="FoxIcon" type="TextureRect" parent="RightPanel/FoxButton" unique_id=1840267329]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.231
+anchor_top = 0.14400001
+anchor_right = 0.73800004
+anchor_bottom = 0.65300006
+offset_left = -0.16799927
+offset_top = 0.32727814
+offset_right = 0.039855957
+offset_bottom = -1.3114929
+scale = Vector2(0.347, 0.347)
+texture = SubResource("AtlasTexture_t4fqj")
+
 [node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=94362038]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.014583333
-anchor_top = 1.0222223
+anchor_top = 0.97407407
 anchor_right = 0.978125
 anchor_bottom = 0.97407407
 offset_top = -128.0

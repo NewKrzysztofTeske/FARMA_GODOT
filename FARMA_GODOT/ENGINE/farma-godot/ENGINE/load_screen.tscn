@@ -1,3 +1,13 @@
 [gd_scene format=3 uid="uid://c3ydvgc46cjr1"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_6ti7j"]
+
 [node name="Node2D" type="Node2D" unique_id=1986423541]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1040833713]
+sprite_frames = SubResource("SpriteFrames_6ti7j")
+
+[node name="Panel" type="Panel" parent="." unique_id=2080523551]
+offset_right = 1920.0
+offset_bottom = 1079.0
+size_flags_horizontal = 4
