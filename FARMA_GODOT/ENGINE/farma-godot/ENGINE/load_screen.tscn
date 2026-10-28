@@ -1,23 +1,328 @@
 [gd_scene format=3 uid="uid://c3ydvgc46cjr1"]
 
-[ext_resource type="Texture2D" uid="uid://dg0feeujwfgha" path="res://GRAPHIC/placeholders/G_B_Load_-1.jpg" id="1_0ker7"]
+[ext_resource type="FontFile" uid="uid://cb8g80mgy05sn" path="res://FONTS/xabakum-font/Xabakum-JpMKM.otf" id="1_e5jht"]
+[ext_resource type="Texture2D" uid="uid://5mjx8u843t7r" path="res://GRAPHIC/placeholders/1_tiles_FARMA.png" id="1_e77g4"]
+[ext_resource type="FontFile" uid="uid://clf7kj7o60ygb" path="res://FONTS/brizel/Brizel.ttf" id="2_8ad5y"]
+[ext_resource type="Texture2D" uid="uid://cv65vykstsmc4" path="res://GRAPHIC/logos/Hen_head.png" id="3_55h4q"]
+[ext_resource type="Texture2D" uid="uid://cuxi3rx4gcy44" path="res://GRAPHIC/logos/Fox_head.png" id="4_dtsej"]
+[ext_resource type="Theme" uid="uid://clv5huy2ffnba" path="res://GRAPHIC/THEMES/ProgresBarTheme.tres" id="5_fine3"]
 
-[node name="Node2D" type="Node2D" unique_id=1986423541]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1lepw"]
+draw_center = false
+border_width_top = 6
+corner_detail = 14
 
-[node name="GBLoad1" type="Sprite2D" parent="." unique_id=96316429]
-position = Vector2(958, 542)
-texture = ExtResource("1_0ker7")
+[sub_resource type="Theme" id="Theme_uw52t"]
 
-[node name="Label" type="Label" parent="GBLoad1" unique_id=1535051033]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3xco"]
+
+[sub_resource type="Theme" id="Theme_3o5b6"]
+default_font = ExtResource("2_8ad5y")
+default_font_size = 64
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lepw"]
+atlas = ExtResource("3_55h4q")
+
+[sub_resource type="Theme" id="Theme_uvwj3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4fqj"]
+atlas = ExtResource("4_dtsej")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnm7r"]
+atlas = ExtResource("1_e77g4")
+region = Rect2(2693.5906, 2677.0928, 793.6858, 155.62451)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owuw8"]
+atlas = ExtResource("1_e77g4")
+region = Rect2(2696, 1608, 784, 176)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8fn7"]
+atlas = ExtResource("1_e77g4")
+region = Rect2(2265, 167, 163, 148)
+
+[sub_resource type="Animation" id="Animation_0p7bw"]
+resource_name = "MainLable_Shake"
+length = 6.0666666
+loop_mode = 1
+capture_included = true
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.14, 2.3, 3.3666666, 5.866667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 2,
+"values": [Vector2(785, 38), Vector2(785, 28.790987), Vector2(785, 33.56219), Vector2(785, 37.850708)]
+}
+
+[sub_resource type="Animation" id="Animation_t4fqj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(785, 38)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0j6qw"]
+_data = {
+&"MainLable_Shake": SubResource("Animation_0p7bw"),
+&"RESET": SubResource("Animation_t4fqj")
+}
+
+[node name="Control" type="Control" unique_id=1547159223]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1074.0
-offset_top = -540.0
-offset_right = -960.0
-offset_bottom = -517.0
-grow_horizontal = 0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1635330918]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSeparator" type="HSeparator" parent="Panel" unique_id=787303340]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.041666668
+anchor_top = 1.0
+anchor_right = 0.9583333
+anchor_bottom = 1.0
+offset_top = -171.0
+offset_bottom = -104.0
+grow_horizontal = 2
 grow_vertical = 0
-text = "Wczytywanie..."
+theme_override_constants/separation = 4
+theme_override_styles/separator = SubResource("StyleBoxFlat_1lepw")
+metadata/_edit_use_anchors_ = true
+
+[node name="HSeparator2" type="HSeparator" parent="Panel" unique_id=1683830458]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.041666668
+anchor_right = 0.95416665
+offset_top = 79.0
+offset_bottom = 174.0
+grow_horizontal = 2
+theme_override_constants/separation = 4
+theme_override_styles/separator = SubResource("StyleBoxFlat_1lepw")
+
+[node name="Label" type="Label" parent="Panel" unique_id=999878317]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -175.0
+offset_top = 38.0
+offset_right = 245.00024
+offset_bottom = 98.001236
+grow_horizontal = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("1_e5jht")
+theme_override_font_sizes/font_size = 60
+text = "Choose your role!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LeftPanel" type="Panel" parent="." unique_id=57061503]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 192.0
+offset_top = 155.0
+offset_right = 929.24445
+offset_bottom = -171.0
+grow_vertical = 2
+
+[node name="HenButton" type="TextureButton" parent="LeftPanel" unique_id=1704362797]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 11.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_uw52t")
+texture_normal = SubResource("AtlasTexture_g3xco")
+
+[node name="HenLabel" type="Label" parent="LeftPanel/HenButton" unique_id=390474468]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -226.6222
+offset_right = 224.37778
+offset_bottom = 68.0
+grow_horizontal = 2
+theme = SubResource("Theme_3o5b6")
+text = "HEN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuestLineEdit" type="LineEdit" parent="LeftPanel/HenButton" unique_id=1923871286]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -301.0
+offset_top = -219.0
+offset_right = 302.0
+offset_bottom = -114.0
+grow_horizontal = 2
+grow_vertical = 0
+placeholder_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+
+[node name="CardNameLineEdit" type="LineEdit" parent="LeftPanel/HenButton" unique_id=1568547295]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -301.5
+offset_top = -104.0
+offset_right = 301.5
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+placeholder_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+
+[node name="HenIcon" type="TextureRect" parent="LeftPanel/HenButton" unique_id=2115797713]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.22900002
+anchor_top = 0.14600001
+anchor_right = 0.73700005
+anchor_bottom = 0.65400004
+offset_left = 0.17098999
+offset_top = 0.2519989
+offset_right = 705.6508
+offset_bottom = 705.34796
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.34673497, 0.34673497)
+texture = SubResource("AtlasTexture_1lepw")
+
+[node name="RightPanel" type="Panel" parent="." unique_id=1262947014]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -896.0
+offset_top = 159.63635
+offset_right = -160.0
+offset_bottom = -176.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="FoxButton" type="TextureButton" parent="RightPanel" unique_id=1329450621]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_uvwj3")
+
+[node name="FoxLabel" type="Label" parent="RightPanel/FoxButton" unique_id=1558908253]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -225.5
+offset_right = 225.5
+offset_bottom = 68.0
+grow_horizontal = 2
+theme = SubResource("Theme_3o5b6")
+text = "FOX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuestLineEdit" type="LineEdit" parent="RightPanel/FoxButton" unique_id=2124564392]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -301.0
+offset_top = -219.0
+offset_right = 302.0
+offset_bottom = -114.0
+grow_horizontal = 2
+grow_vertical = 0
+placeholder_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+
+[node name="CardNameLineEdit" type="LineEdit" parent="RightPanel/FoxButton" unique_id=1400453137]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -301.5
+offset_top = -104.0
+offset_right = 301.5
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+placeholder_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+
+[node name="FoxIcon" type="TextureRect" parent="RightPanel/FoxButton" unique_id=1840267329]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.231
+anchor_top = 0.14400001
+anchor_right = 0.73800004
+anchor_bottom = 0.65300006
+offset_left = -0.16799927
+offset_top = 0.32727814
+offset_right = 0.039855957
+offset_bottom = -1.3114929
+scale = Vector2(0.347, 0.347)
+texture = SubResource("AtlasTexture_t4fqj")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=94362038]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.014583333
+anchor_top = 0.97407407
+anchor_right = 0.978125
+anchor_bottom = 0.97407407
+offset_top = -128.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_fine3")
+fill_mode = 1
+nine_patch_stretch = true
+stretch_margin_left = 36
+stretch_margin_right = 36
+texture_under = SubResource("AtlasTexture_bnm7r")
+texture_over = SubResource("AtlasTexture_owuw8")
+texture_progress = SubResource("AtlasTexture_k8fn7")
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1465118397]
+libraries/ = SubResource("AnimationLibrary_0j6qw")
