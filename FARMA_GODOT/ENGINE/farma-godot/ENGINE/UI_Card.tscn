@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dvuhfgl86klkl"]
+
+[ext_resource type="Texture2D" uid="uid://dg0feeujwfgha" path="res://GRAPHIC/placeholders/G_B_Load_-1.jpg" id="1_vmbab"]
+[ext_resource type="Theme" uid="uid://cxe621b4lbs7c" path="res://GRAPHIC/THEMES/BigLabel.tres" id="2_1kk3w"]
+
+[node name="Node2D" type="Node2D" unique_id=1986423541]
+
+[node name="GBLoad1" type="Sprite2D" parent="." unique_id=96316429]
+position = Vector2(958, 542)
+texture = ExtResource("1_vmbab")
+
+[node name="Label" type="Label" parent="GBLoad1" unique_id=1535051033]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1580.0
+offset_top = -723.0
+offset_right = -994.0
+offset_bottom = -623.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("2_1kk3w")
+text = "Wczytywanie..."
