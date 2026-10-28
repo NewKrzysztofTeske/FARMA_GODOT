@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://buxj2m5vysav2"]
 
 [ext_resource type="Texture2D" uid="uid://bxxkaafln0siy" path="res://GRAPHIC/backgrounds/G_b_menu.jpg" id="1_itfc7"]
-[ext_resource type="Theme" uid="uid://cxe621b4lbs7c" path="res://GRAPHIC/UI/BigLabel.tres" id="2_0k6jj"]
-[ext_resource type="Theme" uid="uid://reuxdhqa37an" path="res://GRAPHIC/UI/RoleLabel.tres" id="2_rhbxv"]
+[ext_resource type="Theme" uid="uid://cxe621b4lbs7c" path="res://GRAPHIC/THEMES/BigLabel.tres" id="2_0k6jj"]
+[ext_resource type="Theme" uid="uid://reuxdhqa37an" path="res://GRAPHIC/THEMES/RoleLabel.tres" id="2_rhbxv"]
+[ext_resource type="Theme" uid="uid://clv5huy2ffnba" path="res://GRAPHIC/THEMES/ProgresBarTheme.tres" id="4_bnm7r"]
 [ext_resource type="Texture2D" uid="uid://df8bprsm0fwj0" path="res://GRAPHIC/logos/logos_head_kopia.png" id="4_k6xmv"]
 [ext_resource type="Texture2D" uid="uid://5mjx8u843t7r" path="res://GRAPHIC/placeholders/1_tiles_FARMA.png" id="4_k8fn7"]
 
@@ -115,7 +116,6 @@ offset_bottom = 477.24
 grow_horizontal = 0
 grow_vertical = 2
 scale = Vector2(0.68, 0.68)
-offset_transform_enabled = true
 
 [node name="TextureB_START" type="TextureButton" parent="MenuBar/HFlowContainer" unique_id=976794918]
 layout_mode = 2
