@@ -1,38 +1,23 @@
 [gd_scene format=3 uid="uid://c3ydvgc46cjr1"]
 
-[ext_resource type="Texture2D" uid="uid://b6hstrwkbeb8a" path="res://GRAPHIC/backgrounds/G_b_loading_.jpg" id="1_e77g4"]
-[ext_resource type="Theme" uid="uid://cxe621b4lbs7c" path="res://GRAPHIC/THEMES/BigLabel.tres" id="2_h37r2"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_6ti7j"]
+[ext_resource type="Texture2D" uid="uid://dg0feeujwfgha" path="res://GRAPHIC/placeholders/G_B_Load_-1.jpg" id="1_0ker7"]
 
 [node name="Node2D" type="Node2D" unique_id=1986423541]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1040833713]
-sprite_frames = SubResource("SpriteFrames_6ti7j")
+[node name="GBLoad1" type="Sprite2D" parent="." unique_id=96316429]
+position = Vector2(958, 542)
+texture = ExtResource("1_0ker7")
 
-[node name="Panel" type="Panel" parent="." unique_id=2080523551]
-offset_right = 1920.0
-offset_bottom = 1079.0
-size_flags_horizontal = 4
-
-[node name="GBLoading" type="Sprite2D" parent="Panel" unique_id=1418244666]
-position = Vector2(962, 538)
-texture = ExtResource("1_e77g4")
-
-[node name="Label" type="Label" parent="Panel" unique_id=2088874271]
-layout_mode = 1
+[node name="Label" type="Label" parent="GBLoad1" unique_id=1535051033]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -630.0
-offset_top = -216.0
-offset_right = -44.0
-offset_bottom = -51.0
+offset_left = -1074.0
+offset_top = -540.0
+offset_right = -960.0
+offset_bottom = -517.0
 grow_horizontal = 0
 grow_vertical = 0
-theme = ExtResource("2_h37r2")
 text = "Wczytywanie..."
-horizontal_alignment = 1
-vertical_alignment = 1
