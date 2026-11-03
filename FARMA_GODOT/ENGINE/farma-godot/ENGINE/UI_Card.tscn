@@ -3,6 +3,8 @@
 [ext_resource type="FontFile" uid="uid://clf7kj7o60ygb" path="res://FONTS/brizel/Brizel.ttf" id="2_ckoa4"]
 [ext_resource type="Texture2D" uid="uid://cv65vykstsmc4" path="res://GRAPHIC/logos/Hen_head.png" id="3_0hyor"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_noh87"]
+
 [sub_resource type="Theme" id="Theme_noh87"]
 default_font = ExtResource("2_ckoa4")
 default_font_size = 64
@@ -202,6 +204,8 @@ offset_right = 1922.0
 offset_bottom = 1082.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1263268950]
+material = SubResource("ShaderMaterial_noh87")
+use_parent_material = true
 position = Vector2(882.994, 514.5535)
 scale = Vector2(20.713541, 24.768248)
 polygon = PackedVector2Array(9.341568, 13.551437, 19.16962, 16.618345, 14.429852, 7.975237, 20.84248, 8.532856, 14.395, 2.3990374, 22.933556, 2.3990374, 14.429852, -0.66787446, 22.166828, -3.2817173, 19.475727, -5.3000374, 14.499554, -9.032175, 19.413578, -14.015904, 9.515823, -12.587003, 5.542783, -17.047964, 0.977267, -12.517301, -8.39772, -14.294714, -4.598934, -9.032175, -12.57987, -4.431809, -4.041313, -0.5981704, -11.604036, 2.0505247, -4.2504215, 2.4687395, -10.663052, 8.532856, -4.7034874, 8.149492, -8.9901905, 17.733587, 0.80301166, 13.795395, 5.124566, 17.942694)

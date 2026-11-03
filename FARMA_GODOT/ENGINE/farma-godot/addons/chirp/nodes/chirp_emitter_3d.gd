@@ -1,0 +1,56 @@
+@icon("res://addons/chirp/icons/emitter_3d.svg")
+class_name ChirpEmitter3D
+extends Node3D
+## Plays a ChirpEvent at this node's position, following it as it moves.
+## One-shot events start a new instance on every play(); looping events restart.
+
+@export var event: ChirpEvent
+## Used when event is empty: any "event:/..." path, including plain audio files.
+@export var event_path := ""
+@export var play_on := ChirpEmitterCore.Trigger.NONE
+@export var stop_on := ChirpEmitterCore.Trigger.NONE
+## Node whose signals drive ENTERED / EXITED / MOUSE_* triggers. Empty = parent.
+@export var trigger_source: NodePath
+## Only bodies/areas in this group fire ENTERED / EXITED. Empty = any.
+@export var trigger_group: StringName
+## Parameter values applied when an instance starts.
+@export var parameters: Dictionary[String, float] = {}
+## Stopping plays the event's envelope release instead of cutting off.
+@export var allow_fadeout := true
+## Only the first play() succeeds.
+@export var trigger_once := false
+## Start loading event_path's file in the background when the emitter enters the scene, instead of
+## on its first play (an assigned event resource loads with the scene anyway).
+@export var preload_event := false
+
+@export_group("Attenuation")
+@export var override_attenuation := false
+@export var unit_size := 10.0
+## 0 = no limit.
+@export var max_distance := 0.0
+
+var _core := ChirpEmitterCore.new(self)
+
+
+func _ready() -> void:
+	_core.setup()
+
+
+func _exit_tree() -> void:
+	_core.on_exit_tree()
+
+
+func play() -> void:
+	_core.play()
+
+
+func stop() -> void:
+	_core.stop()
+
+
+func set_parameter(parameter_name: String, value: float) -> void:
+	_core.set_parameter(parameter_name, value)
+
+
+func is_playing() -> bool:
+	return _core.is_playing()

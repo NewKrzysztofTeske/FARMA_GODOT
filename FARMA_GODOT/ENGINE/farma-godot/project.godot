@@ -12,6 +12,7 @@ config_version=5
 
 config/name="FARMA_GODOT"
 config/version="beta 0.0.1"
+run/main_scene="uid://buxj2m5vysav2"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

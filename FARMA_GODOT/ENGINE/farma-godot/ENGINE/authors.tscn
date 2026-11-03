@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://cxe621b4lbs7c" path="res://GRAPHIC/THEMES/BigLabel.tres" id="1_mh21e"]
 [ext_resource type="Theme" uid="uid://reuxdhqa37an" path="res://GRAPHIC/THEMES/RoleLabel.tres" id="2_28of4"]
 [ext_resource type="Script" uid="uid://bg7wf6axcrwci" path="res://ENGINE/SCRIPT/authors.gd" id="2_l6d1s"]
+[ext_resource type="Theme" uid="uid://b5ehdxb5xgle4" path="res://GRAPHIC/THEMES/ButonsMainMenu.tres" id="4_l6d1s"]
 
 [node name="Control" type="Control" unique_id=1271415861]
 layout_mode = 3
@@ -68,6 +69,9 @@ vertical_alignment = 1
 
 [node name="Description" type="Label" parent="HBoxContainer/RANI_Bgame/MarginContainer/VBoxContainer" unique_id=1534398201]
 layout_mode = 2
+theme = ExtResource("4_l6d1s")
+text = "lorem ipsum
+"
 
 [node name="LineEdit3" type="LineEdit" parent="HBoxContainer/RANI_Bgame/MarginContainer/VBoxContainer" unique_id=165459123]
 layout_mode = 2
