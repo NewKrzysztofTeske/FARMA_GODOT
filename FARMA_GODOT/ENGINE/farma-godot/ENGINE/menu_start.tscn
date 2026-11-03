@@ -5,11 +5,11 @@
 [ext_resource type="Theme" uid="uid://reuxdhqa37an" path="res://GRAPHIC/THEMES/RoleLabel.tres" id="2_rhbxv"]
 [ext_resource type="Theme" uid="uid://clv5huy2ffnba" path="res://GRAPHIC/THEMES/ProgresBarTheme.tres" id="4_bnm7r"]
 [ext_resource type="Texture2D" uid="uid://df8bprsm0fwj0" path="res://GRAPHIC/logos/logos_head_kopia.png" id="4_k6xmv"]
-[ext_resource type="Texture2D" uid="uid://5mjx8u843t7r" path="res://GRAPHIC/placeholders/1_tiles_FARMA.png" id="4_k8fn7"]
+[ext_resource type="Texture2D" uid="uid://d2dj6g1xjs30c" path="res://GRAPHIC/ui/UI_TILSET_4k.png" id="5_bnm7r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1lepw"]
-atlas = ExtResource("4_k8fn7")
-region = Rect2(2691, 2674, 791, 178)
+atlas = ExtResource("5_bnm7r")
+region = Rect2(1918, 1313, 675, 166)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bnm7r"]
 
@@ -123,13 +123,33 @@ theme = ExtResource("4_bnm7r")
 texture_normal = SubResource("AtlasTexture_1lepw")
 texture_pressed = SubResource("AtlasTexture_bnm7r")
 
+[node name="LabelSTART" type="Label" parent="MenuBar/HFlowContainer/TextureB_START" unique_id=1753222942]
+layout_mode = 0
+offset_left = 292.64722
+offset_top = 77.58824
+offset_right = 332.64722
+offset_bottom = 94.58824
+text = "START"
+
 [node name="TextureB_OPTIONS" type="TextureButton" parent="MenuBar/HFlowContainer" unique_id=936156635]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_1lepw")
 
+[node name="LabelOPTIONS" type="Label" parent="MenuBar/HFlowContainer/TextureB_OPTIONS" unique_id=1761110785]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 17.0
+text = "OPTIONS"
+
 [node name="TextureB_AUTHORS" type="TextureButton" parent="MenuBar/HFlowContainer" unique_id=1104792284]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_1lepw")
+
+[node name="LabelAUTHORS" type="Label" parent="MenuBar/HFlowContainer/TextureB_AUTHORS" unique_id=582471180]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 17.0
+text = "AUTHORS"
 
 [node name="LineEdit_GVersion" type="LineEdit" parent="." unique_id=426837338]
 layout_mode = 1

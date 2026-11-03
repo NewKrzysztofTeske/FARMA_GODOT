@@ -4,8 +4,7 @@
 [ext_resource type="FontFile" uid="uid://clf7kj7o60ygb" path="res://FONTS/brizel/Brizel.ttf" id="2_g3xco"]
 [ext_resource type="Texture2D" uid="uid://cv65vykstsmc4" path="res://GRAPHIC/logos/Hen_head.png" id="3_02o7k"]
 [ext_resource type="Texture2D" uid="uid://cuxi3rx4gcy44" path="res://GRAPHIC/logos/Fox_head.png" id="4_0p7bw"]
-[ext_resource type="Theme" uid="uid://clv5huy2ffnba" path="res://GRAPHIC/THEMES/ProgresBarTheme.tres" id="5_0p7bw"]
-[ext_resource type="Texture2D" uid="uid://5mjx8u843t7r" path="res://GRAPHIC/placeholders/1_tiles_FARMA.png" id="5_02o7k"]
+[ext_resource type="Texture2D" uid="uid://d2dj6g1xjs30c" path="res://GRAPHIC/ui/UI_TILSET_4k.png" id="5_02o7k"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1lepw"]
 draw_center = false
@@ -28,17 +27,9 @@ atlas = ExtResource("3_02o7k")
 [sub_resource type="AtlasTexture" id="AtlasTexture_t4fqj"]
 atlas = ExtResource("4_0p7bw")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bnm7r"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0p7bw"]
 atlas = ExtResource("5_02o7k")
-region = Rect2(2693.5906, 2677.0928, 793.6858, 155.62451)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_owuw8"]
-atlas = ExtResource("5_02o7k")
-region = Rect2(2696, 1608, 784, 176)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k8fn7"]
-atlas = ExtResource("5_02o7k")
-region = Rect2(2265, 167, 163, 148)
+region = Rect2(2143, 1632, 66, 1230)
 
 [sub_resource type="Animation" id="Animation_0p7bw"]
 resource_name = "MainLable_Shake"
@@ -302,27 +293,21 @@ offset_bottom = -1.3114929
 scale = Vector2(0.347, 0.347)
 texture = SubResource("AtlasTexture_t4fqj")
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=94362038]
-clip_contents = true
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=752028330]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.014583333
-anchor_top = 0.97407407
-anchor_right = 0.978125
-anchor_bottom = 0.97407407
-offset_top = -128.0
-offset_bottom = -16.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 615.0
+offset_top = -104.0
+offset_right = 681.0
+offset_bottom = 1126.0
 grow_horizontal = 2
 grow_vertical = 0
-theme = ExtResource("5_0p7bw")
-fill_mode = 1
-nine_patch_stretch = true
-stretch_margin_left = 36
-stretch_margin_right = 36
-texture_under = SubResource("AtlasTexture_bnm7r")
-texture_over = SubResource("AtlasTexture_owuw8")
-texture_progress = SubResource("AtlasTexture_k8fn7")
-metadata/_edit_use_anchors_ = true
+rotation = 1.5707964
+texture_under = SubResource("AtlasTexture_0p7bw")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1465118397]
 libraries/ = SubResource("AnimationLibrary_0j6qw")
