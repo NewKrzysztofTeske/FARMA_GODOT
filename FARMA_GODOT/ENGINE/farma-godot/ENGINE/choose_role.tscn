@@ -129,6 +129,13 @@ text = "Choose your role!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=470052965]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 155.0
+offset_right = 232.0
+offset_bottom = 195.0
+
 [node name="LeftPanel" type="Panel" parent="." unique_id=57061503]
 layout_mode = 1
 anchors_preset = 9

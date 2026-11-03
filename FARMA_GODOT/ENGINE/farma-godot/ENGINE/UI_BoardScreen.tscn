@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b0mafwc58ywar" path="res://GRAPHIC/placeholders/PC _ Computer - Cities XL - Roads - Farm Roads.png" id="1_kl87x"]
 [ext_resource type="Texture2D" uid="uid://5mjx8u843t7r" path="res://GRAPHIC/placeholders/1_tiles_FARMA.png" id="1_uw52t"]
+[ext_resource type="PackedScene" uid="uid://b7mhnwq4bwggi" path="res://ENGINE/pause_menu.tscn" id="3_8fp1v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m52wq"]
 atlas = ExtResource("1_uw52t")
@@ -87,3 +88,6 @@ offset_bottom = 110.0
 fill_mode = 4
 nine_patch_stretch = true
 texture_under = SubResource("AtlasTexture_1lepw")
+
+[node name="PauseMenu" parent="." unique_id=1315761111 instance=ExtResource("3_8fp1v")]
+visible = false

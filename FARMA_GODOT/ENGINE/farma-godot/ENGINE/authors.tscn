@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://bjndv5r4ox7sa"]
+
+[ext_resource type="Theme" uid="uid://cxe621b4lbs7c" path="res://GRAPHIC/THEMES/BigLabel.tres" id="1_mh21e"]
+[ext_resource type="Theme" uid="uid://reuxdhqa37an" path="res://GRAPHIC/THEMES/RoleLabel.tres" id="2_28of4"]
+[ext_resource type="Script" uid="uid://bg7wf6axcrwci" path="res://ENGINE/SCRIPT/authors.gd" id="2_l6d1s"]
+
+[node name="Control" type="Control" unique_id=1271415861]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1443937802]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.19607843, 0.19607843, 0.42745098, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1350275763]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -157.5
+offset_top = 18.92
+offset_right = 157.50024
+offset_bottom = 118.92
+grow_horizontal = 2
+theme = ExtResource("1_mh21e")
+text = "Authors"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=187192915]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RANI_Bgame" type="Container" parent="HBoxContainer" unique_id=1203921360]
+layout_mode = 2
+size_flags_horizontal = 4
+script = ExtResource("2_l6d1s")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/RANI_Bgame" unique_id=66504950]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_top = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/RANI_Bgame/MarginContainer" unique_id=413708418]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 38
+
+[node name="RANI" type="Label" parent="HBoxContainer/RANI_Bgame/MarginContainer/VBoxContainer" unique_id=1839642101]
+layout_mode = 2
+theme = ExtResource("2_28of4")
+text = "RÄNI:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="HBoxContainer/RANI_Bgame/MarginContainer/VBoxContainer" unique_id=1534398201]
+layout_mode = 2
+
+[node name="LineEdit3" type="LineEdit" parent="HBoxContainer/RANI_Bgame/MarginContainer/VBoxContainer" unique_id=165459123]
+layout_mode = 2
+
+[node name="LineEdit4" type="LineEdit" parent="HBoxContainer/RANI_Bgame/MarginContainer/VBoxContainer" unique_id=1398743899]
+layout_mode = 2

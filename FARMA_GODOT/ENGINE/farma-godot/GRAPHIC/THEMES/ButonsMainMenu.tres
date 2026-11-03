@@ -1,0 +1,12 @@
+[gd_resource type="Theme" format=3 uid="uid://b5ehdxb5xgle4"]
+
+[ext_resource type="FontFile" uid="uid://clf7kj7o60ygb" path="res://FONTS/brizel/Brizel.ttf" id="1_oytyt"]
+
+[resource]
+default_base_scale = 0.6
+default_font = ExtResource("1_oytyt")
+default_font_size = 100
+ProgressBar/colors/font_color = Color(0.95, 0.95, 0.95, 1)
+ProgressBar/colors/font_outline_color = Color(0.5795274, 0.033579476, 4.813075e-08, 1)
+ProgressBar/constants/outline_size = 17
+ProgressBar/fonts/font = ExtResource("1_oytyt")

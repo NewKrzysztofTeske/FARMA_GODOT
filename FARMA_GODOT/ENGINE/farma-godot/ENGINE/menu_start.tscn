@@ -3,15 +3,20 @@
 [ext_resource type="Texture2D" uid="uid://bxxkaafln0siy" path="res://GRAPHIC/backgrounds/G_b_menu.jpg" id="1_itfc7"]
 [ext_resource type="Theme" uid="uid://cxe621b4lbs7c" path="res://GRAPHIC/THEMES/BigLabel.tres" id="2_0k6jj"]
 [ext_resource type="Theme" uid="uid://reuxdhqa37an" path="res://GRAPHIC/THEMES/RoleLabel.tres" id="2_rhbxv"]
-[ext_resource type="Theme" uid="uid://clv5huy2ffnba" path="res://GRAPHIC/THEMES/ProgresBarTheme.tres" id="4_bnm7r"]
+[ext_resource type="Texture2D" uid="uid://cfgtd8gn5jaj4" path="res://icon.svg" id="3_7vhyg"]
+[ext_resource type="Theme" uid="uid://b5ehdxb5xgle4" path="res://GRAPHIC/THEMES/ButonsMainMenu.tres" id="4_bnm7r"]
 [ext_resource type="Texture2D" uid="uid://df8bprsm0fwj0" path="res://GRAPHIC/logos/logos_head_kopia.png" id="4_k6xmv"]
 [ext_resource type="Texture2D" uid="uid://d2dj6g1xjs30c" path="res://GRAPHIC/ui/UI_TILSET_4k.png" id="5_bnm7r"]
+[ext_resource type="Shader" uid="uid://b1e6h22eotfq6" path="res://ENGINE/SHADERS/menu_buttons.gdshader" id="6_0p6d7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1lepw"]
 atlas = ExtResource("5_bnm7r")
 region = Rect2(1918, 1313, 675, 166)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bnm7r"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7vhyg"]
+shader = ExtResource("6_0p6d7")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tt1gq"]
 atlas = ExtResource("4_k6xmv")
@@ -33,15 +38,19 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.49968556, 0.49968556)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_itfc7")
+expand_mode = 1
 
 [node name="SocialsTabContainer" type="TabContainer" parent="." unique_id=1658558449]
 layout_mode = 0
-offset_right = 101.0
-offset_bottom = 219.0
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 119.0
+offset_bottom = 237.0
 mouse_filter = 2
 mouse_behavior_recursive = 2
+theme = ExtResource("2_0k6jj")
 current_tab = 0
 
 [node name="Socials" type="Label" parent="SocialsTabContainer" unique_id=1370271891]
@@ -52,17 +61,24 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_tab_index = 0
 
-[node name="IG_HFlowContainer" type="HFlowContainer" parent="SocialsTabContainer/Socials" unique_id=1884187359]
+[node name="MarginContainer" type="MarginContainer" parent="SocialsTabContainer/Socials" unique_id=1669530197]
 layout_mode = 0
-offset_right = 96.0
-offset_bottom = 183.0
+offset_top = 26.0
+offset_right = 128.0
+offset_bottom = 286.0
+scale = Vector2(0.5780045, 0.5780045)
+
+[node name="IG_VBoxContainer" type="VBoxContainer" parent="SocialsTabContainer/Socials/MarginContainer" unique_id=2104948499]
+layout_mode = 2
 alignment = 1
 
-[node name="TextureButton2" type="TextureButton" parent="SocialsTabContainer/Socials/IG_HFlowContainer" unique_id=802952464]
+[node name="TextureButton2" type="TextureButton" parent="SocialsTabContainer/Socials/MarginContainer/IG_VBoxContainer" unique_id=802952464]
 layout_mode = 2
+texture_normal = ExtResource("3_7vhyg")
 
-[node name="TextureButton" type="TextureButton" parent="SocialsTabContainer/Socials/IG_HFlowContainer" unique_id=435942650]
+[node name="TextureButton" type="TextureButton" parent="SocialsTabContainer/Socials/MarginContainer/IG_VBoxContainer" unique_id=435942650]
 layout_mode = 2
+texture_normal = ExtResource("3_7vhyg")
 
 [node name="GameLabel2" type="Label" parent="." unique_id=1360952336]
 layout_mode = 1
@@ -103,53 +119,85 @@ offset_right = -63.0
 offset_bottom = 389.0
 metadata/_edit_use_anchors_ = true
 
+[node name="MarginContainer" type="MarginContainer" parent="MenuBar" unique_id=1725893459]
+layout_mode = 0
+offset_left = -635.675
+offset_top = -88.635
+offset_right = 64.32501
+offset_bottom = 417.365
+scale = Vector2(0.811, 0.808)
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuBar/MarginContainer" unique_id=166991976]
+layout_mode = 2
+
+[node name="TextureB_START" type="TextureButton" parent="MenuBar/MarginContainer/VBoxContainer" unique_id=976794918]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("4_bnm7r")
+texture_normal = SubResource("AtlasTexture_1lepw")
+texture_pressed = SubResource("AtlasTexture_bnm7r")
+
+[node name="LabelSTART" type="Label" parent="MenuBar/MarginContainer/VBoxContainer/TextureB_START" unique_id=1753222942]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 30.0
+offset_right = 434.64722
+offset_bottom = 131.0
+theme = ExtResource("4_bnm7r")
+text = "START"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureB_OPTIONS" type="TextureButton" parent="MenuBar/MarginContainer/VBoxContainer" unique_id=936156635]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_1lepw")
+
+[node name="LabelOPTIONS" type="Label" parent="MenuBar/MarginContainer/VBoxContainer/TextureB_OPTIONS" unique_id=1761110785]
+layout_mode = 0
+offset_left = 178.387
+offset_top = 30.0
+offset_right = 461.387
+offset_bottom = 131.0
+theme = ExtResource("4_bnm7r")
+text = "OPTIONS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureB_AUTHORS" type="TextureButton" parent="MenuBar/MarginContainer/VBoxContainer" unique_id=1104792284]
+material = SubResource("ShaderMaterial_7vhyg")
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_1lepw")
+
+[node name="LabelAUTHORS" type="Label" parent="MenuBar/MarginContainer/VBoxContainer/TextureB_AUTHORS" unique_id=582471180]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 30.0
+offset_right = 465.00012
+offset_bottom = 131.00006
+theme = ExtResource("4_bnm7r")
+text = "AUTHORS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="HFlowContainer" type="HFlowContainer" parent="MenuBar" unique_id=1656326213]
+clip_contents = true
 layout_mode = 1
 anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -623.0001
-offset_top = -64.76001
-offset_right = 167.99988
-offset_bottom = 477.24
+offset_left = -619.9
+offset_top = -160.0
+offset_right = 170.09998
+offset_bottom = 640.0
 grow_horizontal = 0
 grow_vertical = 2
 scale = Vector2(0.68, 0.68)
-
-[node name="TextureB_START" type="TextureButton" parent="MenuBar/HFlowContainer" unique_id=976794918]
-layout_mode = 2
-theme = ExtResource("4_bnm7r")
-texture_normal = SubResource("AtlasTexture_1lepw")
-texture_pressed = SubResource("AtlasTexture_bnm7r")
-
-[node name="LabelSTART" type="Label" parent="MenuBar/HFlowContainer/TextureB_START" unique_id=1753222942]
-layout_mode = 0
-offset_left = 292.64722
-offset_top = 77.58824
-offset_right = 332.64722
-offset_bottom = 94.58824
-text = "START"
-
-[node name="TextureB_OPTIONS" type="TextureButton" parent="MenuBar/HFlowContainer" unique_id=936156635]
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_1lepw")
-
-[node name="LabelOPTIONS" type="Label" parent="MenuBar/HFlowContainer/TextureB_OPTIONS" unique_id=1761110785]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 17.0
-text = "OPTIONS"
-
-[node name="TextureB_AUTHORS" type="TextureButton" parent="MenuBar/HFlowContainer" unique_id=1104792284]
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_1lepw")
-
-[node name="LabelAUTHORS" type="Label" parent="MenuBar/HFlowContainer/TextureB_AUTHORS" unique_id=582471180]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 17.0
-text = "AUTHORS"
+theme_override_constants/h_separation = 4
+alignment = 1
+last_wrap_alignment = 2
 
 [node name="LineEdit_GVersion" type="LineEdit" parent="." unique_id=426837338]
 layout_mode = 1

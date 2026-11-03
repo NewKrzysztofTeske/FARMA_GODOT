@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://b7mhnwq4bwggi"]
+
+[ext_resource type="Script" uid="uid://c7jnvfn2mexom" path="res://ENGINE/pause_menu.gd" id="1_elda5"]
+[ext_resource type="Texture2D" uid="uid://d2dj6g1xjs30c" path="res://GRAPHIC/ui/UI_TILSET_4k.png" id="2_d4cfd"]
+[ext_resource type="Shader" uid="uid://b15m5wxyp3fch" path="res://ENGINE/SHADERS/Blur.tres" id="2_ticcq"]
+[ext_resource type="Theme" uid="uid://cxe621b4lbs7c" path="res://GRAPHIC/THEMES/BigLabel.tres" id="3_ticcq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xfflo"]
+shader = ExtResource("2_ticcq")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfflo"]
+atlas = ExtResource("2_d4cfd")
+region = Rect2(1918, 1313, 675, 166)
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1315761111]
+process_mode = 3
+script = ExtResource("1_elda5")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1477401025]
+material = SubResource("ShaderMaterial_xfflo")
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.7647059, 0.43529412, 0.27058825, 1)
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1600995560]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -337.5
+offset_top = -83.0
+offset_right = 337.5
+offset_bottom = 83.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_xfflo")
+
+[node name="Resume" type="Label" parent="TextureButton" unique_id=2099018535]
+layout_mode = 0
+offset_left = 73.5
+offset_top = 39.0
+offset_right = 569.5
+offset_bottom = 119.0
+theme = ExtResource("3_ticcq")
+text = "Resume"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
